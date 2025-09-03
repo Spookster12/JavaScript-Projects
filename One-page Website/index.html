@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My Portfolio Website</title>
+        <link rel="stylesheet" href="CSS/custom_stylesheet.css">
+    </head>
+    <body>
+
+        <!--Nav Bar -->
+        <div class="nav-container">
+            <ul class="Nav">
+                <a href="#home" id="link"><li>Home</li></a>
+                <a href="#about" id="link"><li>About</li></a>
+                <a href="#contact" id="link"><li>Contact</li></a>
+            </ul>
+        </div>
+
+    <!-- Home -->
+    <div class="row" id="home">
+        <!-- Makes a column on the left with a video -->
+        <div class="column-l">
+            <video autoplay muted loop id="myvideo" height="300px" width="600px">
+                <source src="files/coding.mp4" type="video/mp4">
+            </video>
+            <p>Stock Video from Pexels</p>
+        </div>
+        <!-- Makes a column on the right with the Welcome -->
+        <div class="column-r">
+            <h1> Welcome to my website</h1>
+            <p> I have created this from scratch with the help of some references I have made this webpage. </p>
+            <p> There is nothing fancy here this webpage is mostly bare bones and is more of a proof of concept.</p>
+            <p> As time goes on I will be trying to add more here or at the very least update what I do have here</p>
+        </div>
+    </div>
+    
+    <!-- About -->
+    <div class="about-section" id="about">
+        <h1>About Me Section</h1>
+        <p> Hello and welcome to the About Me section! As of writing this I'm currently a student learning to code this is the first project I have done myself without the help of other people.</p>
+        <p> I am currently working/learning the following programming languages: HTML, CSS, JavaScript, SQL, C# and more. </p>
+        <p> I'm looking forward to doing even more projects in the future!</p>
+    </div>
+
+    <!-- Contact/Github -->
+    <div class="row" id="contact">
+        <!-- Makes the link on the right -->
+        <div class="column-r">
+            <h1>GitHub</h1>
+            <p> You can view my GitHub here</p>
+            <p><a href="https://github.com/Spookster12" target="_blank">My GitHub</a></p>
+        </div>
+        <!-- Makes the form on the left form has no end point-->
+        <div class="column-l">
+            <h1>Contact Me</h1>
+            <form action="" method="post">
+                <label>Email</label>
+                    <input type="text" placeholder="Enter Email Here">
+                <label>Message</label>
+                    <input type="text" placeholder="Enter Message Here">
+                    <input type="submit" value="SUBMIT">
+                <br>
+                <br>
+                <br>
+                <p> currently does nothing</p>
+            </form>
+        </div>
+    </div>
+
+    <div class="img-section" id="gallery">
+        <div class="row">
+            <div class="column">
+                <img src="files/coding1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="files/coding2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="files/coding3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="files/coding4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+            </div>
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="files/coding1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="files/coding2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="files/coding3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="files/coding4.jpg" style="width:100%">
+            </div>
+
+                <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+                <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p> This is the footer </p>
+        <p> Currently have nothing to add</p>
+    </footer>
+    <script src="JS/main.js"></script>
+    </body>
+</html>
