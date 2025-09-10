@@ -1,36 +1,34 @@
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
+// fade
 
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
+document.body.classList.add("fade-out");
 
-var slideIndex = 1;
-showSlides(slideIndex);
+window.addEventListener("DOMContentLoaded",() =>{
+  document.body.classList.remove("fade-out");
+});
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+//form validation
+function validate(){
+  let x = document.forms["emailForm"]["fname"].value;
+  if(x==""){
+    alert("please fill out everything");
+    return false;
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+}
+
+// probably a better way but I'm taking the simplest
+function validate2(){
+  let x = document.forms["messageForm"]["test"].value;
+  if(x==""){
+    alert("please fill out everything");
+    return false;
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+// Popup Form
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
 }

@@ -13,8 +13,25 @@
                 <a href="#home" id="link"><li>Home</li></a>
                 <a href="#about" id="link"><li>About</li></a>
                 <a href="#contact" id="link"><li>Contact</li></a>
+                <button class="open-button" onclick="openForm()">Login</button>
             </ul>
         </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
 
     <!-- Home -->
     <div class="row" id="home">
@@ -53,86 +70,15 @@
         <!-- Makes the form on the left form has no end point-->
         <div class="column-l">
             <h1>Contact Me</h1>
-            <form action="" method="post">
+            <form name="emailForm" action="" onsubmit="return validate()" method="post">
                 <label>Email</label>
-                    <input type="text" placeholder="Enter Email Here">
-                <label>Message</label>
-                    <input type="text" placeholder="Enter Message Here">
-                    <input type="submit" value="SUBMIT">
-                <br>
-                <br>
-                <br>
-                <p> currently does nothing</p>
+                    <input name="fname" type="text" placeholder="Enter Email Here">
             </form>
-        </div>
-    </div>
-
-    <div class="img-section" id="gallery">
-        <div class="row">
-            <div class="column">
-                <img src="files/coding1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="files/coding2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="files/coding3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-            </div>
-            <div class="column">
-                <img src="files/coding4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-            </div>
-            </div>
-
-            <!-- The Modal/Lightbox -->
-            <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-
-                <div class="mySlides">
-                <div class="numbertext">1 / 4</div>
-                <img src="files/coding1.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">2 / 4</div>
-                <img src="files/coding2.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">3 / 4</div>
-                <img src="files/coding3.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <div class="numbertext">4 / 4</div>
-                <img src="files/coding4.jpg" style="width:100%">
-            </div>
-
-                <!-- Next/previous controls -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            <!-- Caption text -->
-            <div class="caption-container">
-                <p id="caption"></p>
-            </div>
-
-                <!-- Thumbnail image controls -->
-            <div class="column">
-                <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
-            </div>
-
-            <div class="column">
-                <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
-            </div>
+            <form name="messageForm" action="" onsubmit="return validate2()" method="post">
+                <label>Message</label>
+                    <input name="test" type="text" placeholder="Enter Message Here">
+                    <input type="submit" value="submit">
+            </form>
         </div>
     </div>
 
